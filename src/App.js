@@ -1,4 +1,9 @@
-import './App.css';
+import Home from "./Pages/Home";
+import Error from "./Pages/Error";
+import Rooms from "./Pages/Rooms";
+import SingleRooms from "./Pages/SingleRooms";
+
+// import './App.css';
 function App() {
   return (
     <div className="App">
