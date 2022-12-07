@@ -4,7 +4,7 @@ import Rooms from "./Pages/Rooms";
 import SingleRooms from "./Pages/SingleRooms";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-// import './App.css';
+import './App.css';
 function App() {
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/rooms' element={<Rooms />} />
           <Route path="/rooms/:slug" element={<SingleRooms />} />
-          <Route element={<Error/>}/>
+          <Route path="*"element={<Error/>}/>
         </Routes>
     </>
   );

@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Hero from '../Components/Hero'
 const Error = () => {
   return (
-    <div>Error page is rendering</div>
+    <Hero/>
   )
 }
 
