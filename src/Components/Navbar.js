@@ -3,7 +3,7 @@ import logo from '../images/logo.svg';
 import { FaAlignRight} from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 const Navbar = () => {
-    useState= {isOpen: false}
+    useState= {isOpen: false,}
    function  handleToggle(){
         this.setState({isOpen:! this.state.isOpen})
     }
@@ -13,10 +13,14 @@ const Navbar = () => {
             <div className="nav-header">
                 <Link to="/">
                     <img src={logo} alt="logo"/>
-                    <button type="button" className='nav-btn'><FaAlignRight/>
-                    </button>
                 </Link>
+                <button type='button' className='nav-btn'
+                onClick={handleToggle()}
+                >
+                    <FaAlignRight/>
+                </button>
             </div>
+            <ul className={this.state.isOpen ? "nav-links show-nav":"nav-links" }></ul>
         </div>
     </nav>
   )
