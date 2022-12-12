@@ -6,15 +6,33 @@ const RoomContext = React.createContext();
 
 export default class RoomProvider extends Component {
     state = {
-        
+        rooms: [],
+        sortedRooms: [],
+        featuredRooms: [],
+        loading: true,
+    };
+    // getData
+    //componentLifecycle
+
+    componentDidMount() {
+        //get data
+        let rooms = this.formatData(items)
     }
-  render() {
-    return(
-    <RoomContext.Provider value={{...this.state}}>
-        {this.props.children}
-    </RoomContext.Provider>
-    )
-  }
+    formatData(items){
+        let tempItems = items.map(item => {
+            let id = item.sys.id
+            let images = item.fields.images.map(image => image.fields.file.url)
+            let room = { ...item.fields, images, id }
+            return room
+        })
+    }
+    render() {
+        return (
+            <RoomContext.Provider value={{ ...this.state }}>
+                {this.props.children}
+            </RoomContext.Provider>
+        )
+    }
 }
 
 // Path: src\RoomContainer.js
@@ -22,4 +40,4 @@ export default class RoomProvider extends Component {
 
 const RoomConsumer = RoomContext.Consumer;
 
-export {RoomProvider, RoomConsumer, RoomContext}
+export { RoomProvider, RoomConsumer, RoomContext }
