@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import items from './data';
 const RoomContext = React.createContext();
-// <RoomContext.Provider value={'hello'}
+// <RoomContext.Provider value={'hello'};
 
 
 export default class RoomProvider extends Component {
@@ -22,7 +22,7 @@ export default class RoomProvider extends Component {
         let featuredRooms = rooms.filter( room => room.featured=== true);
         this.setState({
             rooms, featuredRooms, sortedRooms: rooms, loading: false
-        })
+        });
     }
     formatData(items){
         let tempItems = items.map(item => {
