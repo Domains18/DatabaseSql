@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-
+import items from './data';
 const RoomContext = React.createContext();
 // <RoomContext.Provider value={'hello'}
 
 
 export default class RoomProvider extends Component {
     state = {
-        greetings : 'hello',
-        name: 'Gibson'
+        
     }
   render() {
     return(
