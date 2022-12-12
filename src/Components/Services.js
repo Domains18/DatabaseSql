@@ -21,7 +21,7 @@ export default class Services extends Component {
       },
       {
         icon: <FaBeer />,
-        title: "Strongest beer",
+        title: "Strongest Beer",
         info: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, suscipit?"
       }
     ]
