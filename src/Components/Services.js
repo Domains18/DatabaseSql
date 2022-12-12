@@ -11,7 +11,7 @@ export default class Services extends Component {
       },
       {
         icon: <FaHiking />,
-        title: "Endless Hikng",
+        title: "Endless Hiking",
         info: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, suscipit?"
       },
       {
@@ -21,7 +21,7 @@ export default class Services extends Component {
       },
       {
         icon: <FaBeer />,
-        title: "strongest beer",
+        title: "Strongest beer",
         info: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, suscipit?"
       }
     ]
